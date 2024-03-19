@@ -5,14 +5,9 @@ public class RomanNumerals {
     public static String convert(int arabicNumber) {
         String character = "I";
         String result = "";
-        if (arabicNumber == 7) {
-            return "VII";
-        }
-        if (arabicNumber == 6){
-            return "VI";
-        }
-        if (arabicNumber == 5) {
-            return "V";
+        if (arabicNumber >= 5) {
+            result += "V";
+            arabicNumber -= 5;
         }
         for (int i = 0; i < arabicNumber; i++) {
             result += character;
