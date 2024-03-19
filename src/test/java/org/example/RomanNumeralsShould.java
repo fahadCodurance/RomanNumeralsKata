@@ -13,7 +13,8 @@ public class RomanNumeralsShould {
             "2,II",
             "3,III",
             "5,V",
-            "6,VI"
+            "6,VI",
+            "7,VII"
     })
     void convert_arabic_number_to_roman_numeral(int input, String expectedOutput){
         assertEquals(expectedOutput,RomanNumerals.convert(input));
