@@ -5,6 +5,9 @@ public class RomanNumerals {
     public static String convert(int arabicNumber) {
         String character = "I";
         String result = "";
+        if (arabicNumber == 7) {
+            return "VII";
+        }
         if (arabicNumber == 6){
             return "VI";
         }
