@@ -1,21 +1,26 @@
 package org.example;
 
+import java.util.ArrayList;
+
 public class RomanNumerals {
 
     public static String convert(int arabicNumber) {
-        String characterFor1 = "I";
-        String characterFor5 = "V";
+        String[] romanNumerals = {"X", "V", "I"};
+        Integer[] arabicValues = {10, 5, 1};
+
         String result = "";
-        if (arabicNumber == 10){
-            result += "X";
-            arabicNumber -= 10;
+        if (arabicNumber == arabicValues[0]){
+            result +=  romanNumerals[0];
+            arabicNumber -= arabicValues[0];
         }
-        if (arabicNumber >= 5) {
-            result += characterFor5;
-            arabicNumber -= 5;
+        if (arabicNumber >= arabicValues[1]) {
+            result += romanNumerals[1];
+            arabicNumber -= arabicValues[1];
         }
-        for (int i = 0; i < arabicNumber; i++) {
-            result += characterFor1;
+
+        while (arabicNumber > 0){
+            result += romanNumerals[2];
+            arabicNumber -= arabicValues[2];
         }
         return result;
     }
