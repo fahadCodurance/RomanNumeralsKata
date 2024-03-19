@@ -4,9 +4,13 @@ public class RomanNumerals {
 
     public static String convert(int arabicNumber) {
         String character = "I";
-        if (arabicNumber == 2){
-            return character + character;
+        String result = character;
+        if (arabicNumber >= 3){
+            result += character;
         }
-        return character;
+        if (arabicNumber >= 2){
+            result += character;
+        }
+        return result;
     }
 }
