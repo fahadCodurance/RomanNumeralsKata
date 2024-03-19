@@ -16,5 +16,4 @@ public class RomanNumeralsShould {
         assertEquals("II", RomanNumerals.convert(2));
     }
 
-
 }
